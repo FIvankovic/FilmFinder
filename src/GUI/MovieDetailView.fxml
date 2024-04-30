@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minWidth="1309.0" prefHeight="811.0" prefWidth="1545.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MovieDetailView">
+    <children>
+        <BorderPane minWidth="1309.0" prefHeight="811.0" prefWidth="1545.0" style="-fx-background-color: white;">
+            <left>
+                <Pane id="sidebar" prefHeight="738.0" prefWidth="192.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button id="moviebutton" layoutY="53.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="41.0" prefWidth="192.0" text="MOVIES" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button id="actorbutton" layoutY="94.0" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="41.0" prefWidth="191.0" text="ACTORS" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button id="directorbutton" layoutY="135.0" mnemonicParsing="false" onAction="#handleButtonAction3" prefHeight="41.0" prefWidth="192.0" text="DIRECTORS" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="loginbutton" layoutX="-1.0" layoutY="667.0" mnemonicParsing="false" onAction="#handleButtonAction4" prefHeight="41.0" prefWidth="193.0" text="LOGIN" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Button>
+                        <ImageView fitHeight="47.0" fitWidth="150.0" layoutX="11.0" layoutY="-61.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="historyButton" layoutY="256.0" mnemonicParsing="false" onAction="#handleButtonActionFavorite" prefHeight="41.0" prefWidth="193.0" text="WATCH HISTORY" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+            </left>
+            <top>
+                <Pane id="topbar" prefHeight="74.0" prefWidth="1381.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button id="movieBack" layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="41.0" prefWidth="104.0" text="&lt; BACK" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Text fx:id="idTag" fill="WHITE" layoutX="1170.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GUEST" textAlignment="RIGHT" wrappingWidth="305.0302734375">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+            </top>
+            <center>
+            </center>
+         <center>
+            <AnchorPane id="movieDetailPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgray;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="movieDetailImage" fitHeight="229.0" fitWidth="157.0" layoutX="69.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="titleDetail" layoutX="248.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Dark Knight" wrappingWidth="705.13671875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="synopsisDetail" layoutX="248.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="430.13671875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="yearDetail" layoutX="248.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="114.13671875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="reviewDetail" layoutX="69.0" layoutY="369.0" prefHeight="245.0" prefWidth="752.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+                  <Text fx:id="directorDetail" layoutX="248.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="281.13671875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="actorDetail" layoutX="248.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="294.13671875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="directorDetail1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="281.13671875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="genreDetail" layoutX="248.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="281.13671875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="69.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reviews:" wrappingWidth="156.13671875">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="writeReview" layoutX="69.0" layoutY="622.0" prefHeight="82.0" prefWidth="659.0" promptText="WRITE A REVIEW....">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="submitReviewButton" layoutX="740.0" layoutY="623.0" mnemonicParsing="false" onAction="#handleButtonAction5" prefHeight="80.0" prefWidth="81.0" text="SUBMIT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="favoriteButton" layoutX="69.0" layoutY="276.0" mnemonicParsing="false" onAction="#handleButtonAction6" prefHeight="34.0" prefWidth="160.0" text="ADD TO WATCHED" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="delateButton" layoutX="1133.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleButtonActionDelate" prefHeight="48.0" prefWidth="159.0" style="-fx-background-color: red;" text="DELETE MOVIE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
